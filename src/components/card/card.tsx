@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { FunctionComponent } from 'react';
 
 export interface CardProps {
   name: string;
@@ -8,12 +8,12 @@ export interface CardProps {
   services?: string[];
 }
 
-export const Card = (props: CardProps) => {
+export const Card: FunctionComponent<CardProps> = (props) => {
   return (
     <div>
-      <h2>${props.name}</h2>
-      <p>${props.description}</p>
-      <p>${props.address}</p>
+      <h2>{props.name}</h2>
+      <p>{props.description}</p>
+      <p>{props.address}</p>
     </div>
   );
 }
