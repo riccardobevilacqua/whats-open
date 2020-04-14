@@ -6,12 +6,12 @@ import { businesses } from './mock/mockdata';
 import { List } from './components/list/list';
 
 new Server({
-  routes() {
-    this.namespace = '/api';
+  routes(): void {
+    this.namespace = 'api';
 
     this.get('/businesses', () => ({ businesses }));
   }
-})
+});
 
 const App: React.FunctionComponent = () => {
   return (
